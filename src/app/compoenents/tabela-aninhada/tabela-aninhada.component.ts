@@ -15,6 +15,12 @@ export class TabelaAninhadaComponent implements OnInit {
   @Input()
   colunas: ColunaTabelaAninhada[] = [];
 
+  /**
+   * Informe o array de dados da sua tabela, onde cada elemento será um linhas da tabela
+   */
+  @Input()
+  linhas: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {

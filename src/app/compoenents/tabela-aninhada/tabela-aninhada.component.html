@@ -7,6 +7,8 @@
     </tr>
   </thead>
   <tbody>
-
+    <ng-container *ngFor="let linha of linhas">
+      <linha-tabela-aninhada [linha]="linha" [colunas]="colunas" ></linha-tabela-aninhada>
+    </ng-container>
   </tbody>
 </table>
