@@ -1,6 +1,7 @@
 
 <ng-template #conteudoDaLinha >
   <tr>
+    <td><button [class.expandido]="expandido" (click)="expandido = !expandido" class="seta" ></button></td>
     <td *ngFor="let coluna of colunas" >{{ coluna.extrairConteudoDaLinha(linha) }}</td>
   </tr>
 </ng-template>

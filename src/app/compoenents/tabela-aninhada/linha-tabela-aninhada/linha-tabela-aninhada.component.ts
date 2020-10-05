@@ -23,6 +23,8 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
   @Input()
   colunas: ColunaTabelaAninhada[] = [];
 
+  expandido = false;
+
   constructor(private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {

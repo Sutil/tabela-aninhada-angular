@@ -3,3 +3,22 @@ td {
   height: 30px;
   font-size: 14px;
 }
+
+.seta {
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  width: 0;
+  height: 0;
+  border: 7px solid #777;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  margin: 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.seta.expandido {
+  transform: rotate(90deg);
+}
