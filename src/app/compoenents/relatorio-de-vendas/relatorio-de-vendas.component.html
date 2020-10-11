@@ -1,5 +1,8 @@
 
 <div class="relatorio-de-vendas">
   <h2>Relatório de vendas</h2>
-  <tabela-aninhada [colunas]="colunas" [linhas]="linhas" ></tabela-aninhada>
+  <tabela-aninhada
+    [colunas]="colunas"
+    [linhas]="linhas"
+    [extratorDeFilhos]="extratorDeLinhasFilhas" ></tabela-aninhada>
 </div>

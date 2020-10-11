@@ -21,6 +21,12 @@ export class TabelaAninhadaComponent implements OnInit {
   @Input()
   linhas: any[] = [];
 
+  /**
+   * Informe a função para extrair, de cada linha, as linhas filhas.
+   */
+  @Input()
+  extratorDeFilhos: (linha: any) => any[] = (_:any) => null;
+
   constructor() { }
 
   ngOnInit(): void {

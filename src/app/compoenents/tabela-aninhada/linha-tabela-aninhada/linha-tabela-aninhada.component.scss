@@ -22,3 +22,11 @@ td {
 .seta.expandido {
   transform: rotate(90deg);
 }
+
+@for $i from 1 through 5 {
+  $recuo: 10px * $i;
+  .recuo-linha-filha-nivel-#{$i} {
+    width: $recuo;
+    display: inline-block;
+  }
+}

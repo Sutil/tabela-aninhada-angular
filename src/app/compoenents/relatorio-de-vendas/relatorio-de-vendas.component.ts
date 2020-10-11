@@ -53,4 +53,11 @@ export class RelatorioDeVendasComponent implements OnInit {
     return Number(venda.valor).toFixed(2);
   }
 
+  extratorDeLinhasFilhas = (linha) => {
+    if(linha.produtos) {
+      return linha.produtos;
+    }
+    return null;
+  }
+
 }

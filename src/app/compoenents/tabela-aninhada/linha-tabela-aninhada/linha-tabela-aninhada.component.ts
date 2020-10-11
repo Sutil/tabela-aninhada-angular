@@ -23,12 +23,31 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
   @Input()
   colunas: ColunaTabelaAninhada[] = [];
 
+  /**
+   * Informe a função para extrair, de cada linha, as linhas filhas.
+   */
+  @Input()
+  extratorDeFilhos: (linha: any) => any[] = (_:any) => null;
+
+  @Input()
+  nivel = 0;
+
+  filhos: any[] = [];
+
   expandido = false;
 
   constructor(private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {
     this.viewContainerRef.createEmbeddedView(this.conteudoDaLinha);
+
+    this.extrairFilhos();
+  }
+
+  private extrairFilhos() {
+    if(this.extrairFilhos) {
+      this.filhos = this.extratorDeFilhos(this.linha);
+    }
   }
 
 }
