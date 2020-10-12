@@ -9,7 +9,11 @@
   </thead>
   <tbody>
     <ng-container *ngFor="let linha of linhas">
-      <linha-tabela-aninhada [linha]="linha" [colunas]="colunas" [extratorDeFilhos]="extratorDeFilhos" ></linha-tabela-aninhada>
+      <linha-tabela-aninhada
+        [linha]="linha"
+        [colunas]="colunas"
+        [extratorDeFilhos]="extratorDeFilhos"
+        [extratorDeClasseCss]="extratorDeClasseCss" ></linha-tabela-aninhada>
     </ng-container>
   </tbody>
 </table>

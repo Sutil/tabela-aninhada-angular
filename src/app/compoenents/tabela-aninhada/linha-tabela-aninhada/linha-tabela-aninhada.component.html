@@ -1,6 +1,6 @@
 
 <ng-template #conteudoDaLinha >
-  <tr>
+  <tr class="{{ classeCss }}" >
     <td><button *ngIf="filhos && filhos.length > 0" [class.expandido]="expandido" (click)="expandido = !expandido" class="seta" ></button></td>
     <td *ngFor="let coluna of colunas; let i = index" >
       <div *ngIf="i === 0" class="recuo-linha-filha-nivel-{{ nivel }}" ></div>
@@ -13,7 +13,8 @@
         [linha]="linhaFilha"
         [colunas]="colunas"
         [extratorDeFilhos]="extratorDeFilhos"
-        [nivel]="nivel + 1" ></linha-tabela-aninhada>
+        [nivel]="nivel + 1"
+        [extratorDeClasseCss]="extratorDeClasseCss" ></linha-tabela-aninhada>
     </ng-container>
   </ng-container>
 </ng-template>

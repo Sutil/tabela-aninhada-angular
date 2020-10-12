@@ -29,6 +29,12 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
   @Input()
   extratorDeFilhos: (linha: any) => any[] = (_:any) => null;
 
+  /**
+   * Informe a função para extrair, de cada linha, a classe de css customizada
+   */
+  @Input()
+  extratorDeClasseCss: (nivel) => string;
+
   @Input()
   nivel = 0;
 
@@ -36,17 +42,26 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
 
   expandido = false;
 
+  classeCss = '';
+
   constructor(private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {
     this.viewContainerRef.createEmbeddedView(this.conteudoDaLinha);
 
     this.extrairFilhos();
+    this.extrairClasseCss();
   }
 
   private extrairFilhos() {
     if(this.extrairFilhos) {
       this.filhos = this.extratorDeFilhos(this.linha);
+    }
+  }
+
+  private extrairClasseCss() {
+    if(this.extratorDeClasseCss) {
+      this.classeCss = this.extratorDeClasseCss(this.nivel);
     }
   }
 

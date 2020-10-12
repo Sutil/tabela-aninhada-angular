@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ColunaTabelaAninhada } from '../tabela-aninhada/coluna-tabela-aninhada';
 import { vendas } from './db-vendas';
 
@@ -8,7 +8,8 @@ const nomesDosMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho
 @Component({
   selector: 'relatorio-de-vendas',
   templateUrl: './relatorio-de-vendas.component.html',
-  styleUrls: ['./relatorio-de-vendas.component.scss']
+  styleUrls: ['./relatorio-de-vendas.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class RelatorioDeVendasComponent implements OnInit {
 
@@ -62,6 +63,18 @@ export class RelatorioDeVendasComponent implements OnInit {
       return linha.marcas;
     }
     return null;
+  }
+
+  extratorDeCssClassCustomizadaParaLinha = (nivel) => {
+    if(nivel === 0) {
+      return 'setor';
+    }
+
+    if(nivel === 1) {
+      return 'produto';
+    }
+
+    return 'marca'
   }
 
 }

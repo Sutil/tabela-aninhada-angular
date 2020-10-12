@@ -27,6 +27,12 @@ export class TabelaAninhadaComponent implements OnInit {
   @Input()
   extratorDeFilhos: (linha: any) => any[] = (_:any) => null;
 
+  /**
+   * Informe a função para extrair, de cada linha, a classe de css customizada
+   */
+  @Input()
+  extratorDeClasseCss: (nivel) => string;
+
   constructor() { }
 
   ngOnInit(): void {
