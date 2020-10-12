@@ -156,6 +156,114 @@ export const vendas = [
             mes: 12,
             valor: 1000
           },
+        ],
+        marcas: [
+          {
+            nome: 'Marca X',
+            vendas: [
+              {
+                mes: 1,
+                valor: 500
+              },
+              {
+                mes: 2,
+                valor: 500
+              },
+              {
+                mes: 3,
+                valor: 500
+              },
+              {
+                mes: 4,
+                valor: 500
+              },
+              {
+                mes: 5,
+                valor: 500
+              },
+              {
+                mes: 6,
+                valor: 500
+              },
+              {
+                mes: 7,
+                valor: 500
+              },
+              {
+                mes: 8,
+                valor: 500
+              },
+              {
+                mes: 9,
+                valor: 500
+              },
+              {
+                mes: 10,
+                valor: 500
+              },
+              {
+                mes: 11,
+                valor: 500
+              },
+              {
+                mes: 12,
+                valor: 500
+              },
+            ]
+          },
+          {
+            nome: 'Marca Y',
+            vendas: [
+              {
+                mes: 1,
+                valor: 500
+              },
+              {
+                mes: 2,
+                valor: 500
+              },
+              {
+                mes: 3,
+                valor: 500
+              },
+              {
+                mes: 4,
+                valor: 500
+              },
+              {
+                mes: 5,
+                valor: 500
+              },
+              {
+                mes: 6,
+                valor: 500
+              },
+              {
+                mes: 7,
+                valor: 500
+              },
+              {
+                mes: 8,
+                valor: 500
+              },
+              {
+                mes: 9,
+                valor: 500
+              },
+              {
+                mes: 10,
+                valor: 500
+              },
+              {
+                mes: 11,
+                valor: 500
+              },
+              {
+                mes: 12,
+                valor: 500
+              },
+            ]
+          },
         ]
       },
     ]

@@ -57,6 +57,10 @@ export class RelatorioDeVendasComponent implements OnInit {
     if(linha.produtos) {
       return linha.produtos;
     }
+
+    if(linha.marcas) {
+      return linha.marcas;
+    }
     return null;
   }
 
