@@ -32,6 +32,7 @@ export class RelatorioDeVendasComponent implements OnInit {
     const coluna: ColunaTabelaAninhada = {
       cabecalho: 'Setor/produto',
       extrairConteudoDaLinha: (linha) => linha.nome,
+      classeCss: 'coluna-nome',
     }
     this.colunas.push(coluna);
   }
@@ -41,6 +42,7 @@ export class RelatorioDeVendasComponent implements OnInit {
       const coluna: ColunaTabelaAninhada = {
         cabecalho: mes,
         extrairConteudoDaLinha: (linha) => this.vendaNoMes(linha, indice + 1),
+        classeCss: 'coluna-valor',
       }
       return coluna;
     });

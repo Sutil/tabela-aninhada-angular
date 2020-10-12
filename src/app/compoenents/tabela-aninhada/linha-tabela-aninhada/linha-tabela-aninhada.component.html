@@ -2,7 +2,7 @@
 <ng-template #conteudoDaLinha >
   <tr class="{{ classeCss }}" >
     <td><button *ngIf="filhos && filhos.length > 0" [class.expandido]="expandido" (click)="expandido = !expandido" class="seta" ></button></td>
-    <td *ngFor="let coluna of colunas; let i = index" >
+    <td *ngFor="let coluna of colunas; let i = index" class="{{ coluna.classeCss }}" >
       <div *ngIf="i === 0" class="recuo-linha-filha-nivel-{{ nivel }}" ></div>
       {{ coluna.extrairConteudoDaLinha(linha) }}
     </td>
