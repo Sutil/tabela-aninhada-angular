@@ -3,6 +3,14 @@
   background-color: #ede7f6;
   width: 100%;
 
+  th.cabecalho-nome {
+    text-align: left;
+  }
+
+  th.cabecalho-valor {
+    text-align: right;
+  }
+
   tr.setor {
     background-color: #ede7f6;
   }

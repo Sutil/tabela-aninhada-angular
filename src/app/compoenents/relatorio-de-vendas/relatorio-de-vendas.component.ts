@@ -44,6 +44,7 @@ export class RelatorioDeVendasComponent implements AfterViewInit {
   private montaColunaNome() {
     const coluna: ColunaTabelaAninhada = {
       cabecalho: 'Setor/produto',
+      classeCssCabecalho: 'cabecalho-nome',
       extrairConteudoDaLinha: (linha) => linha.nome,
       classeCss: 'coluna-nome',
     }
@@ -54,6 +55,7 @@ export class RelatorioDeVendasComponent implements AfterViewInit {
     const colunasDeMeses = nomesDosMeses.map((mes, indice) => {
       const coluna: ColunaTabelaAninhada = {
         cabecalho: mes,
+        classeCssCabecalho: 'cabecalho-valor',
         extrairConteudoDaLinha: (linha) => this.vendaNoMes(linha, indice + 1),
         classeCss: 'coluna-valor',
       }
