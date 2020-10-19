@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ColunaTabelaAninhada } from '../tabela-aninhada/coluna-tabela-aninhada';
 import { vendas } from './db-vendas';
 
@@ -11,7 +11,10 @@ const nomesDosMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho
   styleUrls: ['./relatorio-de-vendas.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class RelatorioDeVendasComponent implements OnInit {
+export class RelatorioDeVendasComponent implements AfterViewInit {
+
+  @ViewChild('colunaDeAcao', {static: false})
+  colunaDeAcao: TemplateRef<any>;
 
   colunas: ColunaTabelaAninhada[] = [];
 
@@ -19,13 +22,23 @@ export class RelatorioDeVendasComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.montaColunas();
   }
 
   private montaColunas() {
     this.montaColunaNome();
     this.monstaColunasDeMeses();
+    this.montaColunaDeAcao();
+  }
+
+  private montaColunaDeAcao() {
+    const coluna: ColunaTabelaAninhada = {
+      cabecalho: '',
+      extrairConteudoDaLinha: this.colunaDeAcao,
+      classeCss: 'coluna-de-acao'
+    }
+    this.colunas.push(coluna);
   }
 
   private montaColunaNome() {
@@ -51,7 +64,6 @@ export class RelatorioDeVendasComponent implements OnInit {
   }
 
   private vendaNoMes(linha, mes) {
-    console.log(linha)
     const venda = linha.vendas.find(venda => venda.mes === mes);
     return Number(venda.valor).toFixed(2);
   }
@@ -77,6 +89,10 @@ export class RelatorioDeVendasComponent implements OnInit {
     }
 
     return 'marca'
+  }
+
+  selecionaLinha(linha: any) {
+    alert(linha.nome);
   }
 
 }

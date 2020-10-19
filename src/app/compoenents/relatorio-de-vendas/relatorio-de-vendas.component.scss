@@ -19,8 +19,23 @@
     font-style: italic;
   }
 
-  td.coluna-valor {
+  td.coluna-valor,td.coluna-de-acao {
     text-align: right;
+  }
+
+  .botao-selecionar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 10px;
+    outline: none;
+    background-color: #9c27b0;
+    color: white;
+    border-width: 0px;
+
+    &:hover {
+      background-color: #6a1b9a;
+    }
   }
 
 }

@@ -1,7 +1,7 @@
-
+import { TemplateRef } from '@angular/core';
 
 export interface ColunaTabelaAninhada {
   cabecalho: string;
-  extrairConteudoDaLinha: (linha: any) => string;
+  extrairConteudoDaLinha: TemplateRef<any> | ((linha:any) => string);
   classeCss?: string;
 }

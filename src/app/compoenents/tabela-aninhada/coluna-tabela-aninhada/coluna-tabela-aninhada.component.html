@@ -1,0 +1,8 @@
+
+<ng-template #conteudoDaColuna >
+  <ng-container *ngIf="!customizada; else templateCustomizado" ></ng-container>
+    {{ conteudoPadrao }}
+  <ng-template #templateCustomizado >
+    <ng-container *ngTemplateOutlet="this.conteudoCustomizado; context:{linha: linha}" ></ng-container>
+  </ng-template>
+</ng-template>

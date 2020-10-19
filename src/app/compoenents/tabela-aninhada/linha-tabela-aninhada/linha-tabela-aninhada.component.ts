@@ -44,6 +44,8 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
 
   classeCss = '';
 
+  usandoConteudoCustomizado = false;
+
   constructor(private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {
