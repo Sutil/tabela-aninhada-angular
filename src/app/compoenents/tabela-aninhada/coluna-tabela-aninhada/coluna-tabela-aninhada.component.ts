@@ -27,7 +27,6 @@ export class ColunaTabelaAninhadaComponent implements OnInit {
   ngOnInit(): void {
     this.viewContainerRef.createEmbeddedView(this.conteudoDaColuna);
     this.extrairConteudo();
-    console.log(this.linha);
   }
 
   private extrairConteudo() {

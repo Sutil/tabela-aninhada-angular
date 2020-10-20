@@ -6,6 +6,7 @@ import { RelatorioDeVendasComponent } from './compoenents/relatorio-de-vendas/re
 import { TabelaAninhadaComponent } from './compoenents/tabela-aninhada/tabela-aninhada.component';
 import { LinhaTabelaAninhadaComponent } from './compoenents/tabela-aninhada/linha-tabela-aninhada/linha-tabela-aninhada.component';
 import { ColunaTabelaAninhadaComponent } from './compoenents/tabela-aninhada/coluna-tabela-aninhada/coluna-tabela-aninhada.component';
+import { RelatorioRhComponent } from './compoenents/relatorio-rh/relatorio-rh.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ColunaTabelaAninhadaComponent } from './compoenents/tabela-aninhada/col
     RelatorioDeVendasComponent,
     TabelaAninhadaComponent,
     LinhaTabelaAninhadaComponent,
-    ColunaTabelaAninhadaComponent
+    ColunaTabelaAninhadaComponent,
+    RelatorioRhComponent
   ],
   imports: [
     BrowserModule
