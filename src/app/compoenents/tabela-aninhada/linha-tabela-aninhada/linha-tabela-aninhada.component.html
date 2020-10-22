@@ -1,12 +1,13 @@
 
 <ng-template #conteudoDaLinha >
   <tr class="{{ classeCss }}" >
-    <td><button *ngIf="filhos && filhos.length > 0" [class.expandido]="expandido" (click)="expandido = !expandido" class="seta" ></button></td>
     <td *ngFor="let coluna of colunas; let i = index" class="{{ coluna.classeCss }}" >
-      <div *ngIf="i === 0" class="recuo-linha-filha-nivel-{{ nivel }}" ></div>
-
+      <div class="conteudo-celula" >
+        <div *ngIf="i === 0" class="recuo-linha-filha-nivel-{{ nivel }}" ></div>
+        <button *ngIf="i === 0 && filhos && filhos.length > 0" [class.expandido]="expandido" (click)="expandido = !expandido" class="seta" ></button>
+        <coluna-tabela-aninhada [linha]="linha" [coluna]="coluna" ></coluna-tabela-aninhada>
+      </div>
       <!--conteúdo da célula-->
-      <coluna-tabela-aninhada [linha]="linha" [coluna]="coluna" ></coluna-tabela-aninhada>
 
     </td>
   </tr>
