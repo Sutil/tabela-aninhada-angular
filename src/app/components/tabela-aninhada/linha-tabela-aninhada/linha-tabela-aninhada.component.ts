@@ -35,16 +35,23 @@ export class LinhaTabelaAninhadaComponent implements OnInit {
   @Input()
   extratorDeClasseCss: (nivel) => string;
 
+  /**
+   * Esse input vai ser chamado recursivamente para definir o nível de cada linha
+   */
   @Input()
   nivel = 0;
 
   filhos: any[] = [];
 
+  /**
+   * Define se a linha está expandida ou retraída.
+   */
   expandido = false;
 
+  /**
+   * Armazena a classe CSS da linha.
+   */
   classeCss = '';
-
-  usandoConteudoCustomizado = false;
 
   constructor(private viewContainerRef: ViewContainerRef) { }
 
