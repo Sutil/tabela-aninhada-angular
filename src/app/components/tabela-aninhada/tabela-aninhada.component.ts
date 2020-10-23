@@ -6,7 +6,7 @@ import { ColunaTabelaAninhada } from './coluna-tabela-aninhada';
   templateUrl: './tabela-aninhada.component.html',
   styleUrls: ['./tabela-aninhada.component.scss']
 })
-export class TabelaAninhadaComponent implements OnInit {
+export class TabelaAninhadaComponent {
 
 
   /**
@@ -34,8 +34,5 @@ export class TabelaAninhadaComponent implements OnInit {
   extratorDeClasseCss: (nivel) => string;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -2,11 +2,11 @@ import { Component, Input, OnInit, TemplateRef, ViewChild, ViewContainerRef } fr
 import { ColunaTabelaAninhada } from '../coluna-tabela-aninhada';
 
 @Component({
-  selector: 'coluna-tabela-aninhada',
-  templateUrl: './coluna-tabela-aninhada.component.html',
-  styleUrls: ['./coluna-tabela-aninhada.component.scss']
+  selector: 'celula-tabela-aninhada',
+  templateUrl: './celula-tabela-aninhada.component.html',
+  styleUrls: ['./celula-tabela-aninhada.component.scss']
 })
-export class ColunaTabelaAninhadaComponent implements OnInit {
+export class CelulaTabelaAninhadaComponent implements OnInit {
 
   @ViewChild('conteudoDaColuna', {static: true})
   conteudoDaColuna: TemplateRef<any>;
@@ -30,13 +30,13 @@ export class ColunaTabelaAninhadaComponent implements OnInit {
   }
 
   private extrairConteudo() {
-    const tipo = (typeof this.coluna.extrairConteudoDaLinha);
+    const tipo = (typeof this.coluna.conteudoDaCelula);
     if(tipo === 'function') {
-      const extrator = <(a: any) => string>this.coluna.extrairConteudoDaLinha;
+      const extrator = <(a: any) => string>this.coluna.conteudoDaCelula;
       this.conteudoPadrao = extrator(this.linha);
     } else {
       this.customizada = true;
-      this.conteudoCustomizado = <TemplateRef<any>>this.coluna.extrairConteudoDaLinha;
+      this.conteudoCustomizado = <TemplateRef<any>>this.coluna.conteudoDaCelula;
     }
   }
 

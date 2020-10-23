@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RelatorioDeVendasComponent } from './compoenents/relatorio-de-vendas/relatorio-de-vendas.component';
-import { TabelaAninhadaComponent } from './compoenents/tabela-aninhada/tabela-aninhada.component';
-import { LinhaTabelaAninhadaComponent } from './compoenents/tabela-aninhada/linha-tabela-aninhada/linha-tabela-aninhada.component';
-import { ColunaTabelaAninhadaComponent } from './compoenents/tabela-aninhada/coluna-tabela-aninhada/coluna-tabela-aninhada.component';
-import { RelatorioRhComponent } from './compoenents/relatorio-rh/relatorio-rh.component';
+import { RelatorioDeVendasComponent } from './components/relatorio-de-vendas/relatorio-de-vendas.component';
+import { TabelaAninhadaComponent } from './components/tabela-aninhada/tabela-aninhada.component';
+import { LinhaTabelaAninhadaComponent } from './components/tabela-aninhada/linha-tabela-aninhada/linha-tabela-aninhada.component';
+import { CelulaTabelaAninhadaComponent } from './components/tabela-aninhada/celula-tabela-aninhada/celula-tabela-aninhada.component';
+import { RelatorioRhComponent } from './components/relatorio-rh/relatorio-rh.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { RelatorioRhComponent } from './compoenents/relatorio-rh/relatorio-rh.co
     RelatorioDeVendasComponent,
     TabelaAninhadaComponent,
     LinhaTabelaAninhadaComponent,
-    ColunaTabelaAninhadaComponent,
+    CelulaTabelaAninhadaComponent,
     RelatorioRhComponent
   ],
   imports: [

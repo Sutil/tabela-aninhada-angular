@@ -35,7 +35,7 @@ export class RelatorioDeVendasComponent implements AfterViewInit {
   private montaColunaDeAcao() {
     const coluna: ColunaTabelaAninhada = {
       cabecalho: '',
-      extrairConteudoDaLinha: this.colunaDeAcao,
+      conteudoDaCelula: this.colunaDeAcao,
       classeCss: 'coluna-de-acao'
     }
     this.colunas.push(coluna);
@@ -45,7 +45,7 @@ export class RelatorioDeVendasComponent implements AfterViewInit {
     const coluna: ColunaTabelaAninhada = {
       cabecalho: 'Setor/produto',
       classeCssCabecalho: 'cabecalho-nome',
-      extrairConteudoDaLinha: (linha) => linha.nome,
+      conteudoDaCelula: (linha) => linha.nome,
       classeCss: 'coluna-nome',
     }
     this.colunas.push(coluna);
@@ -56,7 +56,7 @@ export class RelatorioDeVendasComponent implements AfterViewInit {
       const coluna: ColunaTabelaAninhada = {
         cabecalho: mes,
         classeCssCabecalho: 'cabecalho-valor',
-        extrairConteudoDaLinha: (linha) => this.vendaNoMes(linha, indice + 1),
+        conteudoDaCelula: (linha) => this.vendaNoMes(linha, indice + 1),
         classeCss: 'coluna-valor',
       }
       return coluna;
