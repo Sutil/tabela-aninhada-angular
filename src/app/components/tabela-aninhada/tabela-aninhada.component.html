@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <!-- percorrer cada coluna -->
+      <th *ngFor="let coluna of colunas" class="{{ coluna.classeCssCabecalho }}" >
+        {{ coluna.cabecalho }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- percorrer cada linha -->
+    <ng-container *ngFor="let linha of linhas">
+
+      <!-- Em breve iremos criar o componente que representa cada linha -->
+      <linha-tabela-aninhada
+        [linha]="linha"
+        [colunas]="colunas"
+        [extratorDeFilhos]="extratorDeFilhos"
+        [extratorDeClasseCss]="extratorDeClasseCss" ></linha-tabela-aninhada>
+    </ng-container>
+  </tbody>
+</table>

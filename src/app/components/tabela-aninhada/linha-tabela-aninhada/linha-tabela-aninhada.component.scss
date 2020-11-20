@@ -1,0 +1,39 @@
+td {
+  border-top: 1px solid #fff;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+
+  .conteudo-celula {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.seta {
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  width: 0;
+  height: 0;
+  border: 5px solid #777;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  margin: 3px 5px 3px 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.seta.expandido {
+  transform: rotate(90deg);
+}
+
+/* definindo classes para os níveis 1 a 5 */
+@for $i from 1 through 5 {
+  $recuo: 10px * $i;
+  .recuo-linha-filha-nivel-#{$i} {
+    width: $recuo;
+    display: inline-block;
+  }
+}

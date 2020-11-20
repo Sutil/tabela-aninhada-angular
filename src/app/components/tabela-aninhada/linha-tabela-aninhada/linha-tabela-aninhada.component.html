@@ -1,0 +1,37 @@
+
+<ng-template #conteudoDaLinha >
+  <tr class="{{ classeCss }}" >
+
+    <!-- percorrer cada coluna -->
+    <td *ngFor="let coluna of colunas; let i = index" class="{{ coluna.classeCss }}" >
+      <div class="conteudo-celula" >
+
+        <!-- Deve existir um recuo na linha dependendo de cada nível na tabela -->
+        <div *ngIf="i === 0" class="recuo-linha-filha-nivel-{{ nivel }}" ></div>
+
+        <!-- O botáo de expandir e retrair deve aparecer somente se for a primeira coluna e a linha tiver filhos -->
+        <button *ngIf="i === 0 && filhos && filhos.length > 0" class="seta" [class.expandido]="expandido" (click)="expandido = !expandido" ></button>
+
+        <!-- Em breve criaremos o componente que vai representar cada célula -->
+        <celula-tabela-aninhada [linha]="linha" [coluna]="coluna" ></celula-tabela-aninhada>
+      </div>
+    </td>
+    <!-- fim da coluna -->
+
+  </tr>
+
+  <!-- As linhas filhas só aparecem se estiver expandido -->
+  <ng-container *ngIf="expandido" >
+
+    <!-- percorrer as linhas filhas e chamar esse componente recursivamente -->
+    <ng-container *ngFor="let linhaFilha of filhos" >
+      <linha-tabela-aninhada
+        [linha]="linhaFilha"
+        [colunas]="colunas"
+        [extratorDeFilhos]="extratorDeFilhos"
+        [nivel]="nivel + 1"
+        [extratorDeClasseCss]="extratorDeClasseCss" ></linha-tabela-aninhada>
+    </ng-container>
+  </ng-container>
+</ng-template>
+
