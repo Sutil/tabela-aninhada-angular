@@ -1,4 +1,6 @@
-# ProjetoTabelaAninhada
+# Tabela aninhada dinâmica com Angular
+![cover image](https://miro.medium.com/max/700/1*tiaAyPpGIocXeUWxjD7Z9A.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
