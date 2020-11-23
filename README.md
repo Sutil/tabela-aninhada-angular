@@ -16,4 +16,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Cafezinho
 Se esse conteúdo te ajudou de alguma forma, considere dorar R$ 1,00 através da chave PIX. Obrigado!
 
-![Chave Pix](./pix.jpg =50x50)
+<img src="./pix.jpg" width="200" />
