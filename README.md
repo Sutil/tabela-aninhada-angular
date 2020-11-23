@@ -11,3 +11,9 @@ Acesse o [demo](https://github-twttaj.stackblitz.io/).
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+## Cafezinho
+Se esse conteúdo te ajudou de alguma forma, considere dorar quaalquer valor
+
+[![Donate image](https://viralataviravida.org.br/novo/wp-content/uploads/2018/08/doarcompagueseguro.jpg)](https://pag.ae/7WC2drEg3)
