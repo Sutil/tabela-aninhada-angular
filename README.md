@@ -1,6 +1,6 @@
 # Tabela aninhada dinâmica com Angular
 
-Esse projeto foi desenvolvido para facilitar o uso de tabelas aninhasdas com o Angular. Foi mostrado como é possível montar uma tabela aninhada passando as linhas (objetos) e as colunas para o componente.
+Este projeto foi desenvolvido para facilitar o uso de tabelas aninhasdas com o Angular. Foi mostrado como é possível montar uma tabela aninhada passando as linhas (objetos) e as colunas para o componente.
 
 ![cover image](https://miro.medium.com/max/700/1*tiaAyPpGIocXeUWxjD7Z9A.png)
 
@@ -14,6 +14,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ## Cafezinho
-Se esse conteúdo te ajudou de alguma forma, considere dorar R$ 1,00 através da chave PIX. Obrigado!
+Se esse conteúdo te ajudou de alguma forma, considere doar R$ 1,00 através da chave PIX. Obrigado!
 
 <img src="./pix.jpg" width="200" />
