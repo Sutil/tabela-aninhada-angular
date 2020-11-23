@@ -14,6 +14,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ## Cafezinho
-Se esse conteúdo te ajudou de alguma forma, considere dorar quaalquer valor
+Se esse conteúdo te ajudou de alguma forma, considere dorar qualquer R$ 1,00. Obrigado.
 
 [![Donate image](https://viralataviravida.org.br/novo/wp-content/uploads/2018/08/doarcompagueseguro.jpg)](https://pag.ae/7WC2drEg3)
